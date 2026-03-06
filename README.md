@@ -1,9 +1,9 @@
 # furiosa-llm-getting-started
 
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue)
-![SDK](https://img.shields.io/badge/Furiosa%20SDK-2026.1.0-brightgreen)
-![Platform](https://img.shields.io/badge/NPU-FuriosaAI%20RNGD-orange)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue)](https://www.python.org/)
+[![SDK](https://img.shields.io/badge/Furiosa%20SDK-2026.1.0-brightgreen)](https://developer.furiosa.ai/latest/en/)
+[![Platform](https://img.shields.io/badge/NPU-FuriosaAI%20RNGD-orange)](https://developer.furiosa.ai/latest/en/overview/rngd.html)
 
 A **community companion** to the official [Furiosa-LLM Quick Start guide](https://developer.furiosa.ai/latest/en/get_started/furiosa_llm.html).
 This repository provides ready-to-run scripts, practical troubleshooting notes,
