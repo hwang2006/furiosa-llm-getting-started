@@ -18,17 +18,20 @@ curl -sS -N "${HOST}/v1/chat/completions" \
         \"stream\": true
     }" \
     | sed -n 's/^data: //p' \
-    | while IFS= read -r line; do
-        [[ -z "$line" ]] && continue
-        [[ "$line" == "[DONE]" ]] && break
-        echo "$line" | python3 - <<'PY'
+    | python3 -c "
 import sys, json
-try:
-    d = json.load(sys.stdin)
-    print(d["choices"][0]["delta"].get("content", ""), end="", flush=True)
-except Exception:
-    pass
-PY
-    done
+for line in sys.stdin:
+    line = line.strip()
+    if not line or line == '[DONE]':
+        continue
+    try:
+        d = json.loads(line)
+        content = d['choices'][0]['delta'].get('content', '')
+        if content:
+            print(content, end='', flush=True)
+    except Exception:
+        pass
+print()
+"
 echo ""
 echo "✅ Stream complete."
