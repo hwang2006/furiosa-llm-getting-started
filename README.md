@@ -52,11 +52,32 @@ python examples/05_tool_router_weather_openmeteo.py
 ```
 
 ### 5. Launch OpenAI-compatible server
+
+The server must keep running while the test scripts are executed. Use two terminals.
+
+**Terminal 1 — start the server**
+
 ```bash
+cd ~/furiosa-llm-getting-started
+source .venv/bin/activate
+
 furiosa-llm serve furiosa-ai/Llama-3.1-8B-Instruct
+```
+
+Leave this terminal running.
+
+**Terminal 2 — run the tests**
+
+```bash
+cd ~/furiosa-llm-getting-started
+source .venv/bin/activate
+
 ./scripts/test_chat_completion.sh
 ./scripts/test_chat_stream_pretty.sh "Give me 5 short tips for prompting."
 ```
+
+If you see `Failed to connect to localhost port 8000`, make sure the server in Terminal 1 is running and ready.
+
 
 ---
 
