@@ -37,7 +37,7 @@ cd furiosa-llm-getting-started
 ./scripts/00_system_prereq_ubuntu22.sh
 ```
 
-### 2. Install Furiosa-LLM
+### 2. Install Furiosa-LLM and activate venv
 ```bash
 ./scripts/01_install_furiosa_llm_uv_venv.sh
 source .venv/bin/activate
