@@ -26,6 +26,12 @@ and extended examples that go beyond the official documentation.
 
 ## Quick Commands
 
+### 0. Clone the repository
+```bash
+git clone https://github.com/hwang2006/furiosa-llm-getting-started.git
+cd furiosa-llm-getting-started
+```
+
 ### 1. Install prerequisites (Ubuntu 22.04)
 ```bash
 ./scripts/00_system_prereq_ubuntu22.sh
